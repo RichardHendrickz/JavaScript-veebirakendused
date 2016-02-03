@@ -5,13 +5,25 @@
   <title>Hello world!</title>
 </head>
 <body>
-  Eesnimi: <input type="text" name="" id="First-name"><br>
-  Perekonnanimi: <input type="text" name="" id="Last-name"><br>
-  <input type="submit" value="Tervita">
+  Eesnimi: <input type="text" name="" id="first-name"><br>
+  Perekonnanimi: <input type="text" name="" id="last-name"><br>
+  <input type="submit" value="Tervita" onclick="welcome()">
   <!--siit tuleb javascript-->
   <div id="output"></div>
   <script>
+    var first_name; //määrame muutujad, neile ei pea andma väärtusi
+    var last_name;
 
+    function welcome(){
+      //console.log('töötab');
+      //Saan kätte väärtused
+      first_name = document.getElementById('first-name').value;
+      last_name = document.getElementById('last-name').value;
+      console.log(first_name+' '+last_name);
+      //kirjutame html elemendi sissse
+      document.getElementById('output').innerHTML = '<strong>Tere </strong>'+first_name+' '+last_name;
+
+}
   </script>
 
 
