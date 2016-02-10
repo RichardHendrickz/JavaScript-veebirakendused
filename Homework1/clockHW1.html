@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clock</title>
+
+
+
+
+    <script src="clockHW1.js"></script>
+</head>
+<body>
+  <div id="clock">0:0:0</div>
+
+<!--ESIMENE-->
+  <button onclick="hammer()">What time is it?</button>
+
+  <p id="demo"></p>
+
+  <script>
+  function hammer() {
+      document.getElementById("demo").innerHTML = "It's hammer time!";
+
+  }
+</script>
+<!-- TEINE -->
+
+<img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" border="0" src="hammer.gif" alt="Smiley" width="32" height="32">
+<script>
+function bigImg(x) {
+    x.style.height = "256px";
+    x.style.width = "256px";
+}
+
+function normalImg(x) {
+    x.style.height = "32px";
+    x.style.width = "32px";
+}
+</script>
+
+
+
+
+
+</body>
+</html>
