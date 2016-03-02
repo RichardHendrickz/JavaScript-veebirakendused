@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kell</title>
+  <script src="clock.js"></script>
+  <link href='clock.css' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+    html, body {
+  		height: 100%;
+  		margin: 0;
+  	}
+  	#page {
+  		min-height: 100%;
+      background-color: #1a1a1a;
+  	}
+    #clock-div, #date-div{
+      font-family: 'Poiret One', cursive;
+      font-size: 30px;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition:  0.5s;
+    }
+    #date-div{
+      font-size: 15px;
+      opacity: 0;
+    }
+    #author{
+      font-family: 'Poiret One', cursive;
+      color: white;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 10px;
+    }
+    #info{
+      font-family: 'Poiret One', cursive;
+      font-size: 20px;
+      color: white;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      transition: 1s;
+    }
+  </style>
+</head>
+<body>
+  <div id="page" onclick="mouseClick()">
+    <div id="clock-div"></div>
+    <div id="date-div"></div>
+    <p id="author" size=8px>Credits go to P.Nestor</p>
+    <div id="info">
+      klahvid 1, 2, 3, 4, 5 vahetavad värvi</br>
+      klahv d kuvab kuupäeva</br>
+      hiire rullik muudab suurust</br>
+      hiireklahv vahetab fonti
+    </div>
+  </div>
+</body>
+</html>

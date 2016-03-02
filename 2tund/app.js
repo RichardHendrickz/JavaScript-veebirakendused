@@ -7,12 +7,18 @@
     }
     Moosipurk.instance = this; //instance = meie funktsioon, this  viitab moosipurgile
     console.log(this);
+    this.click_count = 0;
+
       //console.log('moosipurgi sees');
       this.init(); // panen rakenduse tööle
   };
 
   //KÕIK moosipurgi funktsioonid tulevad siia sisse!
   Moosipurk.prototype = {
+    //Kõiki muutujad, mis on üldised(mitmes kohas kasutatavad jne) ja muudetavad, hakkame hoidma siin
+
+
+
     init: function(){
       console.log('rakendus käivitus');
       //Siia tuleb esialgne loogika:
@@ -24,13 +30,13 @@
       document.querySelector('.add-new-jar').addEventListener('click', this.addNewClick.bind(this)); //kui tahan eventlisteneri sees kutsuda välja mingi teise funktsiooni, siis bind(this) kirjuta lõppu
     },
     addNewClick: function(){
-      console.log(event);
+      this.click_count++;
+      console.log(this.click_count);
     }
   };
 
   window.onload = function(){
     var app = new Moosipurk();
-    var app2 = new Moosipurk();
   };
 
 })();
