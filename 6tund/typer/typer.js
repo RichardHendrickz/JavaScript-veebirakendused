@@ -10,7 +10,7 @@ var TYPER = function(){
 	this.WIDTH = window.innerWidth;
 	this.HEIGHT = window.innerHeight;
 	this.canvas = null;
-	this.ctx = null;
+	this.ctx = null; //canvase pikslite massiiv või kogum
 
 	this.words = []; // kõik sõnad
 	this.word = null; // preagu arvamisel olev sõna
@@ -150,10 +150,15 @@ TYPER.prototype = {
 
 			if(this.word.left.length === 0){
 
-				this.guessed_words += 1;
+				this.guessed_words += 1; //siit saab äraarvatud sõnad
 
                 //update player score
-                this.player.score = this.guessed_words;
+                this.player.score = this.guessed_words; //siit saab skoori
+                //Siia teeme juurde, et salvestaks kasutaja nime ja skoori- Selleks siia sisse AJAX, mis saadab infi .php faili (vt tund 6)
+//Kopeerin siia AJAX'i, mis saadab infot php faili.?
+                xhttp.open("GET", "save.php?id="+this.player+"&title="+this.player.score+"&ingredients="+ingredients, true); //BLABLA, omalooming, pooleli
+                xhttp.send();
+
 
 				//loosin uue sõna
 				this.generateWord();
